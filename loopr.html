@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <link rel="stylesheet" type="text/css" href="css/looprstyle.css">
+        <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8">
+        <title>Loopr</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="description" content="Loopr is a web audio project simulating that of a music controller. Sound clips are assigned to each button. They are synced to a matching tempo and can be used to create loops and beats of varying sounds and style.">
+        <meta name="author" content="Riley Tompkins, Justin Kim">
+        <meta name="keywords" content="music, controller, launchpad, beats, grid">   
+    </head>
+<body>
+    <div class='background'>
+        <p>
+            <a href='#' class='coming'><span class='coming-soon-left'>COMING SOON </span><span class='strikethrough'>90</span></a> | 
+            <a class='tempo' href='loopr.html'>128</a> | 
+            <a href='#' class='coming'><span class='strikethrough'>140</span><span class='coming-soon-right'>COMING SOON </span></a>
+        </p>
+        <canvas id="beat-bar"></canvas>
+        <div class='backgroundlayer'>
+            <div id="sp" class="button-group-navigation" target="_blank">
+                <div class="bass">
+                    <span id="pad1" data-sound="sounds/Bassline2.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad1" data-sound="sounds/VFX2Bass1128BPMcopy.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad1" data-sound="sounds/VEH2SpecialSounds-28copy.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad1" data-sound="sounds/VFX2Bass3128BPMcopy.wav"><li><a class="btn" href="#"></a></li></span>
+                </div>
+                <div class='loops'>
+                    <hr>
+                    <span id="pad2" data-sound="sounds/VEH2SpecialSounds-13copy.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad3" data-sound="sounds/VEH2SpecialSounds-36copy.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad4" data-sound="sounds/VEC2SpecialSounds01.wav"><li><a class="btn" href="#"></a></li></span><br>
+                    <span id="pad4" data-sound="sounds/VEH2SpecialSounds-02copy.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad4" data-sound="sounds/VFX2Loop006128BPMcopy.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad4" data-sound="sounds/VEC2Crowds24.wav"><li><a class="btn" href="#"></a></li></span><br>
+                    <span id="pad4" data-sound="sounds/VEEElectroLoop007.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad4" data-sound="sounds/VEH1ShakerLoop-02copy.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad4" data-sound="sounds/VEC3SpecialSounds002RootE132BPM.wav"><li><a class="btn" href="#"></a></li></span> 
+                </div>
+                <div class='drums'>
+                    <hr>
+                    <span id="pad5" data-sound="sounds/VEEElectroLoop001.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad5" data-sound="sounds/VFX2Beat128BPMcopy.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad5" data-sound="sounds/percloop.wav"><li><a class="btn" href="#"></a></li></span>
+                    <span id="pad5" data-sound="sounds/VEEElectroLoop024copy.wav"><li><a class="btn" href="#"></a></li></span>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Loopr Audio Project</p>
+        </footer>
+    </div>
+<script src="js/active.js"></script>
+<script src="js/loopr_canvas.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/loopr_audio.js"></script>
+</body>
+</html>
