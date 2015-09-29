@@ -29,12 +29,14 @@
     padding-bottom: 100px;
 }
 
-.btn {
+.btn, .btn-lg {
     border-radius: 0;
-
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     transition: all .3s ease-in-out;
+}
+.btn-lg {
+    margin: 0px 5px;
 }
 .btn-primary {
     border: 1px solid #0017CC;
@@ -218,20 +220,31 @@ a:focus {
 .highlight {
     color: #8D8D8D;
 }
+.wrapper {
+    position: relative;
+    z-index: 10;
+}
 .intro {
     display: table;
     width: 100%;
-    height: auto;
+    height: 700px;
     padding: 100px 0;
     text-align: center;
     background: url(../img/blackwood.png) no-repeat bottom center scroll;
     background-size: cover;
     -o-background-size: cover;
+    background-attachment: fixed;
+    z-index: 1;
 }
 .intro .intro-body {
-    display: table-cell;
-    vertical-align: middle;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);transform: translate(-50%, -50%);
 }
+
+
 .intro-text {
     color: #C2C2C2;
 }
@@ -256,6 +269,8 @@ a:focus {
 /*WORK*/
 .work {
     padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: black;
 }
 .show {
     margin: 0 auto;
@@ -274,9 +289,9 @@ a:focus {
     transform: translateX(300px) translateY(200px)scale(1.05) translate3d(0, 0, 0);
 }
 .show-block {
-  	opacity: 1;
-  	-webkit-transform: translateX(0) translateY(0) scale(1) translate3d(0, 0, 0);
-  	transform: translateX(0) translateY(0) scale(1) translate3d(0, 0, 0);
+    opacity: 1;
+    -webkit-transform: translateX(0) translateY(0) scale(1) translate3d(0, 0, 0);
+    transform: translateX(0) translateY(0) scale(1) translate3d(0, 0, 0);
 }
 
 .photo-grid {
@@ -357,11 +372,15 @@ a:focus {
 }
 /*CONTACT*/
 #contact {
-    padding-top: 50px;
-    padding-bottom: 200px;
+    padding-top: 100px;
+    /*margin-bottom: 100px;*/
+    padding-bottom: 300px;
     background: rgba(0,0,0,1);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(40%, rgba(52,52,52,1)), color-stop(60%, rgba(52,52,52,1)), color-stop(100%, rgba(0,0,0,1)));
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 40%, rgba(52,52,52,1) 60%, rgba(0,0,0,1) 100%);
+}
+.contact-info {
+    padding-top: 200px;
 }
 
 /*FOOTER*/
@@ -468,5 +487,11 @@ footer ul li {
     }
     .hide-mobile {
         display: none;
+    }
+}
+
+@media(max-width:479px) {
+    .photo-grid li {
+        width: 210px;
     }
 }
