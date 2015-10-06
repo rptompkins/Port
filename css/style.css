@@ -425,6 +425,19 @@ footer ul li {
     }
     .intro {
         padding: 120px 0px 100px 0px;
+        display: table;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        background: url(../img/blackwood.png) no-repeat bottom center scroll;
+        background-size: cover;
+        -o-background-size: cover;
+
+    }
+    .intro .intro-body {
+        position: inherit;
+        text-align: center;
+        transform: none;
     }
     .intro .intro-body .brand-heading {
         font-size: 40px;
