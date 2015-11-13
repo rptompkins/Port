@@ -24,32 +24,14 @@
     background: #fcfcfc;
     background: rgba(255,255,255,.2);
 }
-.content-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
 
-.btn, .btn-lg {
+.btn {
     border-radius: 0;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     transition: all .3s ease-in-out;
 }
-.btn-lg {
-    margin: 0px 5px;
-}
-.btn-primary {
-    border: 1px solid #0017CC;
-    color: #0014AE;
-    background-color: transparent;
-}
-.btn-primary:hover,
-.btn-primary:focus {
-    border: 1px solid #0014AE;
-    outline: 0;
-    color: white;
-    background-color: #0014AE;
-}
+
 .btn-default {
     border: 1px solid #098400;
     color: #098400;
@@ -62,7 +44,7 @@
     color: white;
     background-color: #098400;
 }
-.btn-circle {
+/*.btn-circle {
     width: 70px;
     height: 70px;
     margin-top: 15px;
@@ -97,7 +79,7 @@
     -moz-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
-}
+}*/
 body {
     width: 100%;
     height: 100%;
@@ -110,21 +92,19 @@ html {
     width: 100%;
     height: 100%;
 }
+img {
+    max-width: 368px;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 35px;
+    margin: 0 0 30px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
-}
-p {
-    margin: 0 0 35px;
-    font-size: 20px;
-    line-height: 1.6;
 }
 a {
     color: #098400;
@@ -133,7 +113,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #097B00;
+    color: #065500;
 }
 
 /*NAV*/
@@ -164,12 +144,34 @@ a:focus {
 .navbar-custom .nav li a {
     transition: background .3s ease-in-out;
     text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-custom .nav li a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease;
 }
 .navbar-custom .nav li a:hover {
+    background-color: transparent;
+    color: #C5C5C5;
+    transition: color .5s ease;
     outline: 0;
     color: rgba(255,255,255,.8);
     background-color: transparent;
 }
+
+.navbar-custom .nav li a:hover:after {
+    outline: 0;
+    width: 100%;
+    background: #0CAA00;
+}
+
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:active {
     outline: 0;
@@ -212,6 +214,7 @@ a:focus {
 .logo-fixed {
     width: 36%;
     transition: width .5s;
+    z-index: 9999;
     }
 /*HEADER*/
 .navbar-brand {
@@ -222,162 +225,63 @@ a:focus {
 }
 .wrapper {
     position: relative;
-    z-index: 10;
+    z-index: 99;
 }
-.intro {
-    display: table;
-    width: 100%;
-    height: 700px;
-    padding: 100px 0;
-    text-align: center;
-    background: url(../img/blackwood.png) no-repeat bottom center scroll;
+.break {
+    padding: 75px 0px;
+    background: url(../img/blackwood.png) bottom center fixed;
     background-size: cover;
     -o-background-size: cover;
-    background-attachment: fixed;
+    z-index: 999;
+}
+.intro {
+    /*display: table;*/
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url(../img/blackwood.png) bottom center fixed;
+    background-size: cover;
+    -o-background-size: cover;
     z-index: 1;
 }
 .intro .intro-body {
-    position: fixed;
+/*    position: fixed;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);transform: translate(-50%, -50%);
-}
-
-
-.intro-text {
-    color: #C2C2C2;
-}
-.intro {
-    height: 100%;
-    padding: 0;
-}
-.intro .intro-body .brand-heading {
-    font-size: 40px;
-}
-.intro .intro-body .intro-text {
-    font-size: 26px;
-}
-
-/*BIO*/
-.bio {
-    background-color: #343434;
-    border-top: 1px solid #098400;
-    border-bottom: 1px solid #098400;
+    transform: translate(-50%, -50%);transform: translate(-50%, -50%);*/
 }
 
 /*WORK*/
-.work {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: black;
+.workTitle {
+    position: fixed;
+    bottom: 40%;
+    z-index: 999;
+    padding-left: 20px;
+    line-height: 80px;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 .show {
-    margin: 0 auto;
-    text-align: center;
-    opacity: 0;
-    margin-top: 40px;
-}
-.fly-left {
-    transition: all 500ms ease-in-out;
-    -webkit-transform: translateX(-300px) translateY(200px)scale(1.05) translate3d(0, 0, 0);
-    transform: translateX(-300px) translateY(200px)scale(1.05) translate3d(0, 0, 0);
-}
-.fly-right {
-    transition: all 500ms ease-in-out;
-    -webkit-transform: translateX(300px) translateY(200px)scale(1.05) translate3d(0, 0, 0);
-    transform: translateX(300px) translateY(200px)scale(1.05) translate3d(0, 0, 0);
-}
-.show-block {
     opacity: 1;
-    -webkit-transform: translateX(0) translateY(0) scale(1) translate3d(0, 0, 0);
-    transform: translateX(0) translateY(0) scale(1) translate3d(0, 0, 0);
+    transition: opacity 1s ease;
+}
+.work {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url(../img/debut_dark.png) center center scroll;
+    -webkit-box-shadow: 0 0 50px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 50px 1px rgba(0,0,0,0.75);
+    box-shadow: 0 0 40px 5px rgba(0,0,0,0.75);
 }
 
-.photo-grid {
-    max-width: 100%;
-}
-.photo-grid li {
-    display: inline-block;
-    margin: 1em;
-    width: 350px;
-}
-.photo-grid img {
-    display: block;
-    height: auto;
-    transition: all 600ms;
-    max-width: 100%;
-}
-.photo-grid li:hover img {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
-}
-.photo-grid figure {
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-.photo-grid figcaption {
-    background: rgba(0,0,0,0.8);
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-style: italic;
-    color:  white;
-    border-bottom: 3px inset #098400;
-    display: table;
-    text-align: left;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-left: 5px;
-    transition: all 600ms;
-    transition-delay: 100ms;
-    z-index: 100;
-}
-
-.photo-grid li:hover figcaption {
-    opacity: 1;
-}
-.photo-grid figcaption p {
-    display: table-cell;
-    font-size: 24px;
-    position: relative;
-    top: -40px;
-    width: 350px;
-    transition: all 600ms ease-out;
-    vertical-align: middle;
-}
-.photo-grid li:hover figcaption p {
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px);
-}
-.modal .modal-dialog .modal-content {
-    border-radius: 0px;
-    background-color: #D7D7D7;
-    color: black;
-    font-family: 'Lato', sans-serif;
-}
-.modal > div > div > div.modal-body > p {
-    font-size: 16px;
-    margin-bottom: 0px;
-}
-.modal-footer {
-    margin-bottom: -25px;
-}
-.modal-technologies {
-    font-size: 15px;
-}
 /*CONTACT*/
 #contact {
-    padding-top: 100px;
-    /*margin-bottom: 100px;*/
-    padding-bottom: 300px;
-    background: rgba(0,0,0,1);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(40%, rgba(52,52,52,1)), color-stop(60%, rgba(52,52,52,1)), color-stop(100%, rgba(0,0,0,1)));
-    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(52,52,52,1) 40%, rgba(52,52,52,1) 60%, rgba(0,0,0,1) 100%);
+    padding-bottom: 200px;
+    background: url(../img/blackwood.png) center center fixed;
+    z-index: 100;
 }
 .contact-info {
     padding-top: 200px;
@@ -407,104 +311,48 @@ footer ul li {
 }
 
 /*-----MOBILE-----*/
-@media(max-width:900px) {
-.photo-grid li {
-    width: 270px;
+@media screen and (min-width: 768px) {
+    .intro-body {
+        padding-top: 200px;
     }
-}
+    .intro-text {
+        font-size: 2.5rem;
+        border-bottom: 1px solid #098400;
+        padding-bottom: 20px;
+    }
 
-@media(max-width:767px) {
-    .navbar-brand{
-        display: inherit;
+    .bio {
+        padding-top: 50px;
     }
-    .navbar-brand .logo {
-        width: 25%;
+    .bio p, .bio h2 {
+        text-align: justify;
     }
-    .logo {
-        display: none;
+    p {
+        font-size: 1.7rem;
     }
-    .intro {
-        padding: 120px 0px 100px 0px;
-        display: table;
-        width: 100%;
-        height: auto;
-        text-align: center;
-        background: url(../img/blackwood.png) no-repeat bottom center scroll;
-        background-size: cover;
-        -o-background-size: cover;
-
+    .projectRow {
+        /*padding: 0px 120px;*/
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: left;
     }
-    .intro .intro-body {
-        position: inherit;
-        text-align: center;
-        transform: none;
+    .workTitle {
+        background-color: white;
+        left: -4px;
     }
-    .intro .intro-body .brand-heading {
-        font-size: 40px;
-    }
-    .intro .intro-body .intro-text {
-        font-size: 20px;
-    }
-    .show {
-        float: none;
-        margin: 60px auto;
-        display: block;
+    .workTitle h1 {
+        margin-bottom: 10px;
+        font-family: 'Lato', sans-serif;
+        font-size: 50px;
         position: relative;
-        right: 25px;
-        opacity: 1;
+        right: 5px;
+        color: black;
     }
-    .fly-left {
-        transition: none;
-        -webkit-transform: none;
-        transform: none;
+    .pad {
+        padding-left: 50px;
     }
-    .fly-right {
-    transition: none;
-    -webkit-transform: none;
-    transform: none;
+    .projectRow h2 {
+        border-bottom: 1px solid #098400;
     }
-    .show-block {
-    /*opacity: 1;*/
-    -webkit-transform: none;
-    transform: none;
-    }
-    .modal-footer {
-        margin-bottom: -15px;
-    }
-    .photo-grid figcaption {
-        opacity: 1;
-    }
-    .photo-grid figcaption p {
-        top: 0px;
-        transition: none;
-    }
-    .photo-grid li {
-    width: 320px;
-    }
-    .photo-grid li:hover figcaption p {
-        -webkit-transform: none;
-        transform:none;
-    }
-    footer p{
-        font-size: 14px;
-        position: relative;
-        top: 15px;
-    }
-    footer ul li {
-    font-size: 14px;
-    display: block;
-    padding-right: 10px;
-    }
-    footer  {
-    padding: 40px 0px 40px 0;
-    }
-    .hide-mobile {
-        display: none;
-    }
-}
 
-@media(max-width:479px) {
-    .photo-grid li {
-        width: 210px;
-    }
 }
