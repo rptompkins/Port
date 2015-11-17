@@ -5,14 +5,28 @@ body {
     -ms-touch-action: manipulation; /* IE10  */
     touch-action: manipulation;     /* IE11+ */
 }
+
+.no-js #loader {
+    display: none;
+}
+#loader {
+    position: fixed;
+    left: 0;
+    top: 200px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: black;
+    color: white;
+}
 .backgroundlayer {
     background:rgba(40, 40, 40, 0.7);
     position: fixed;
-    top: 200px;
+    top: 300px;
     width: 101%;
-    -moz-box-shadow: 0px 0px 20px rgba(20,255,255, .6);
-    -webkit-box-shadow: 0px 0px 20px rgba(20,255,255, .6);
-    box-shadow: 0px 0px 20px rgba(20,255,255, .6);
+    -moz-box-shadow: 0px 0px 20px rgba(160, 0, 0, .6);
+    -webkit-box-shadow: 0px 0px 20px rgba(160, 0, 0, .6);
+    box-shadow: 0px 0px 20px rgba(160, 0, 0, .6);
     margin-left: -10px;
 }
 
@@ -37,17 +51,31 @@ hr {
     border: 0;
     height: 1px;
     width: 800px;
-    background-image: -webkit-linear-gradient(left, rgba(110, 0, 0, 0), rgba(110, 0, 0 ,0.75), rgba(110, 0, 0, 0));
-    background-image:    -moz-linear-gradient(left, rgba(110, 0, 0, 0), rgba(110, 0, 0, 0.75), rgba(110, 0, 0, 0));
-    background-image:     -ms-linear-gradient(left, rgba(110, 0, 0, 0), rgba(110, 0, 0, 0.75), rgba(110, 0, 0, 0));
-    background-image:      -o-linear-gradient(left, rgba(110, 0, 0, 0), rgba(110, 0, 0, 0.75), rgba(110, 0, 0, 0));
+    background-image: -webkit-linear-gradient(left, rgba(252, 255, 0, 0), rgba(252, 255, 0, .3), rgba(252, 255, 0, 0));
+    background-image:    -moz-linear-gradient(left, rgba(252, 255, 0, 0), rgba(252, 255, 0, .3), rgba(252, 255, 0, 0));
+    background-image:     -ms-linear-gradient(left, rgba(252, 255, 0, 0), rgba(252, 255, 0, .3), rgba(252, 255, 0, 0));
+    background-image:      -o-linear-gradient(left, rgba(252, 255, 0, 0), rgba(252, 255, 0, .3), rgba(252, 255, 0, 0));
     margin: 3px 0px 3px 0px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     bottom: 2px;
 }
-
+.container {
+    width: 100%;
+    text-align: center;
+}
+.description1, .description2 {
+    width: 30%;
+    display: inline-block;
+    margin: 0px 15px;
+    vertical-align: top;
+}
+.container  p, .container  p{
+    font-size: 16px;
+    text-align: justify;
+    display: block;
+}
 p {
     text-align: center;
     margin-top: 0px;
