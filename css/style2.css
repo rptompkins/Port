@@ -31,49 +31,11 @@
         font-weight: 400;
         transition: all .3s ease-in-out;
     }
-    .btn-circle {
-        width: 70px;
-        height: 70px;
-        margin-top: 15px;
-        padding: 7px 16px;
-        border: 2px solid #098400;
-        font-size: 40px;
-        color: #B6B6B6;
-        background: 0 0;
-        transition: color .3s ease-in-out;
-    }
-    .btn-circle:hover,
-    .btn-circle:focus {
-        outline: 0;
-        background: rgba(255,255,255,.1);
-        color: #098400;
-        border-color: #098400;
-    }
-    .btn-circle i.animated {
-        -webkit-transition-property: -webkit-transform;
-        -webkit-transition-duration: 1s;
-        -moz-transition-property: -moz-transform;
-        -moz-transition-duration: 1s;
 
-    }
-    .btn-circle:hover i.animated {
-        -webkit-animation-name: pulse;
-        -moz-animation-name: pulse;
-        -webkit-animation-duration: 1.5s;
-        -moz-animation-duration: 1.5s;
-        -webkit-animation-iteration-count: infinite;
-        -moz-animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        -moz-animation-timing-function: linear;
-    }
     .btn-default {
         border: 1px solid #098400;
         color: #098400;
         background-color: transparent;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 60%;
     }
     .btn-default:hover,
     .btn-default:focus {
@@ -240,7 +202,6 @@
         background-size: cover;
         -o-background-size: cover;
         z-index: 1;
-        padding-top: 280px;
     }
 
     /*WORK*/
@@ -255,10 +216,11 @@
         visibility: none;
     }
     .work {
-        border-bottom: .5px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
         padding-top: 100px;
         padding-bottom: 100px;
-        background: url(../img/irongrip.png) center center scroll;
+        background: url(../img/debut_dark.png) center center scroll;
         -webkit-box-shadow: 0 0 50px 1px rgba(0,0,0,0.75);
         -moz-box-shadow: 0 0 50px 1px rgba(0,0,0,0.75);
         box-shadow: 0 0 40px 5px rgba(0,0,0,0.75);
@@ -266,19 +228,12 @@
 
     /*CONTACT*/
     #contact {
-        padding-bottom: 100px;
-        background: url(../img/txture.png);
+        padding-bottom: 200px;
+        background: url(../img/blackwood.png) center center fixed;
         z-index: 100;
     }
-    #contact .btn {
-        width: inherit;
-    }
     .contact-info {
-        padding-top: 100px;
-        padding-bottom: 20px;
-    }
-    .contact-info p {
-        font-size: 1.7rem;
+        padding-top: 200px;
     }
 
     /*FOOTER*/
@@ -292,20 +247,17 @@
     }
     footer  {
         padding: 40px 0px 40px 0;
-        background: url(../img/txture.png);
     }
     footer p {
         font-size: 15px;
         margin-bottom: 0px;
     }
     footer ul li {
+        display: inline;
         color: #098400;
-        font-size: 1.7rem;
+        font-size: 16px;
         margin-top: 5px;
-        display: block;
-        padding-right: 10px;
     }
-
     .navbar-brand{
         display: inherit;
     }
@@ -315,24 +267,26 @@
     .logo {
         display: none;
     }
+    .intro {
+        padding-top: 170px;
+    }
     img {
         width: 60%;
     }
     .intro-text {
-        padding-top: 15px;
-        padding-bottom: 50px;
-        color: #C0C0C0;
-        font-size: 2rem;
+        padding-bottom: 60px;
     }
     .bio {
-        padding: 200px 0px;
+        border-top: 1px solid #098400;
+        padding-top: 60px;
         line-height: 2rem;
         font-size: 1.7rem;
         text-align: justify;
-        background: url(../img/blackwood.png) center center fixed;
-        z-index: 100;
+        margin-bottom: 900px;
     }
-
+    .bio h2 {
+        text-align: center;
+    }
     .work p {
         font-size: 1.7rem;
     }
@@ -349,8 +303,22 @@
     .intro .intro-body .brand-heading {
         font-size: 40px;
     }
-
-
+    .intro .intro-body .intro-text {
+        font-size: 20px;
+    }
+    footer p{
+        font-size: 14px;
+        position: relative;
+        top: 15px;
+    }
+    footer ul li {
+        font-size: 14px;
+        display: block;
+        padding-right: 10px;
+    }
+    footer  {
+        padding: 40px 0px 40px 0;
+    }
     .hide-mobile {
         display: none;
     }
@@ -358,7 +326,8 @@
         display: inherit;
     }
     .projectRow a img {
-        padding: 35px 0px;
+        padding: 20px 0px;
+
     }
     h2.mobile {
         text-align: center;
@@ -366,54 +335,11 @@
         border-bottom: 1px dotted #098400;
         width: 60%;
     }
-    .hide-tab {
-        display: none;
-    }
-    .hide-md {
-        line-height: 2.3rem;
-    }
-    .bio a img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 60px 0px;
-        border-radius: 50%;
-        max-width: 200px;
-    }
-
-    .bio h2 {
-        font-variant: small-caps;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 40px;
-        font-weight: 400;
-        color: #6D6D6D;
-        text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
-    }
-    div.col-xs-12.col-md-4.hide-md {
-        text-align: justify;
-        padding: 0px 40px;
-    }
-
-
-
     /*-----TABLET-----*/
     @media screen and (min-width: 768px) {
-            .projectRow a img {
-        padding: 0px 0px;
-    }
-        div.col-xs-12.col-md-4.hide-md {
-
-            padding: 0px 90px;
-        }
         img {
             max-width: 368px;
             width: 100%;
-        }
-        .bio {
-            padding: 200px 0px 200px 50px;
-
-            z-index: 100;
         }
         .intro {
             height: 1000px;
@@ -424,7 +350,9 @@
         .logo {
             display: inline;
         }
-
+        .bio h2 {
+            text-align: center;
+        }
         .workTitle {
             position: fixed;
             bottom: 40%;
@@ -461,70 +389,27 @@
             border-bottom: 1px solid #098400;
         }
         footer ul li {
-            font-size: 14px;
-            display: inline;
-            padding-right: 0px;
-        }
-        .hide-tab {
-            display: none;
-        }
-        .hide-md {
-            padding-top: 10px;
-            text-align: center;
-        }
-        .btn-default {
-            text-align: left;
-            float: left;
-            display: inherit;
-            width: auto;
-        }
+        font-size: 14px;
+        display: inline;
+        padding-right: 0px;
     }
-
-
+    }
 
     /*-----COMPUTER-----*/
     @media screen and (min-width: 992px) {
-        .work a img {
-            transition: all .5s ease;
-            transform: rotate(-10deg);
-
-        }
-        .work a img.img-right {
-            transform: rotate(10deg);
-        }
-        .work a:hover img {
-            transform: rotate(0deg);
-        }
-        .work a:hover img.img-right {
-            transform: rotate(0deg);
-        }
         .intro {
+            padding-top: 200px;
             height: 800px;
         }
-        .bio a img {
-            display: inline;
-            padding: 0px 0px;
-            border-radius: 0%;
-            margin-left: 80px;
-        }
-        .bio img {
-            /*border: 1px solid #CFCFCF;*/
-            box-shadow: 0 0 10px .5px black;
-            max-width: 280px;
-            
-        }
+
         .intro-text {
             font-size: 2.5rem;
             padding-bottom: 50px;
         }
-        .bio h2 {
-            text-align: left;
-            padding-bottom: 40px;
-        }
-        .bio p {
+
+        .bio p, .bio h2 {
             text-align: justify;
         }
-
         p {
             font-size: 1.7rem;
         }
@@ -541,11 +426,5 @@
         img {
             max-width: 368px;
             width: 100%;
-        }
-        .hide-tab {
-            display: inherit;
-        }
-        .hide-md {
-            display: none;
         }
     }

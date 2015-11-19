@@ -7,7 +7,7 @@ $(window).scroll(function() {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
         $(".logo").removeClass("logo-fixed");
     }
-    if ($(".navbar").offset().top > 400 && $(".navbar").offset().top < 2500 ) {
+    if ($(".navbar").offset().top > 400 && $(".navbar").offset().top < 2650 ) {
         $('.workTitle').addClass('show');
       }
       else {
